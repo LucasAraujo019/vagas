@@ -1,0 +1,75 @@
+body {
+    color: #FFF;
+    background-color: #1a1a1a;
+}
+
+/* HEADER */
+
+.navbar-brand {
+    position: relative;
+}
+
+#logo {
+    width: 50px;
+}
+
+#facil-title {
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    left: 55px;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+#main-navbar {
+    background-color: #000;
+}
+
+#main-container{
+    color: #FFF;
+}
+
+.table {
+    /* background-color: #ffffff; Cor de fundo da tabela */
+    color: #FFF; /* Cor do texto */
+    /* border: 1px solid #cccccc; */
+}
+
+#navbar {
+    min-width: 30%;
+}
+
+.navbar-nav {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #FFF;
+}
+
+
+/* HOME */
+#main-container {
+    color: #FFF;
+    min-height: 80vh;
+    padding: 40px;
+}
+
+
+/* FOOTER */
+#footer {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+}
