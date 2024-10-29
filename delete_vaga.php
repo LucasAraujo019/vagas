@@ -2,8 +2,8 @@
 session_start(); // Inicia a sessão
 require_once("db.php"); // Arquivo de conexão com o banco de dados
 
-if (isset($_GET['id'])) {
-    $id = intval($_GET['id']);
+if (isset($_POST['id'])) {
+    $id = intval($_POST['id']);
 
     if ($id > 0) {
         $sql = "DELETE FROM vagas_cadastradas WHERE id = :id";
