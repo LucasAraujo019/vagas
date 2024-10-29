@@ -1,6 +1,6 @@
 body {
     color: #FFF;
-    background-color: #1a1a1a;
+    background-color: #212121;
 }
 
 /* HEADER */
@@ -23,7 +23,7 @@ body {
 }
 
 #main-navbar {
-    background-color: #000;
+    background-color: #171717;
 }
 
 #main-container{
@@ -61,6 +61,20 @@ body {
     padding: 40px;
 }
 
+.form-add-vaga .btn {
+    margin-bottom: 10px;/* Animação ao passar o mouse */
+}
+
+.btn-custom {
+    padding: 5px 8px; /* Ajusta o preenchimento do botão */
+    font-size: 12px; /* Ajusta o tamanho da fonte */
+}
+
+.custom-modal .modal-content {
+    color: #171717; /* Cor de fundo do rodapé */
+}
+
+
 
 /* FOOTER */
 #footer {
@@ -68,7 +82,7 @@ body {
     bottom: 0; 
     left: 0; 
     right: 0;
-    background-color: #000;
+    background-color: #171717;
     color: #FFF;
     text-align: center;
     padding: 20px;
