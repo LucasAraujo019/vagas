@@ -1,4 +1,8 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     color: #FFF;
     background-color: #212121;
 }
@@ -28,6 +32,7 @@ body {
 
 #main-container{
     color: #FFF;
+    flex: 1;
 }
 
 .table {
@@ -74,14 +79,33 @@ body {
     color: #171717; /* Cor de fundo do rodapé */
 }
 
+.modal-header-custom {
+    color: #0056b3; /* Cor azul */
+}
+
+.modal-body-custom {
+    color: #555; /* Cor cinza */
+}
+
+.form-control {
+    background-color: #333; /* Cor de fundo cinza */
+    color: #FFF; /* Cor do texto branca */
+}
+
+.form-control::placeholder {
+    color: #FFF; /* Cor do texto do placeholder branca */
+}
+
+.form-control:focus {
+    background-color: #333; /* Mantém a cor de fundo cinza ao focar */
+    color: #FFF; /* Mantém a cor do texto branca ao focar */
+    border-color: #0056b3; /* Opcional: altera a cor da borda ao focar (pode ser removido) */
+    outline: none; /* Remove o contorno padrão do campo */
+}
 
 
 /* FOOTER */
 #footer {
-    position: absolute;
-    bottom: 0; 
-    left: 0; 
-    right: 0;
     background-color: #171717;
     color: #FFF;
     text-align: center;
