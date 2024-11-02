@@ -10,6 +10,8 @@ $salario = $_POST['salario'] ?? '';
 $link_vaga = $_POST['link_vaga'] ?? '';
 $data_aplicacao = $_POST['data_aplicacao'] ?? '';
 $data_retorno = $_POST['data_retorno'] ?? null;
+$requisitos = $_POST['requisitos'] ?? '';
+$beneficios = $_POST['beneficios'] ?? '';
 
 
 $salario = filter_var($salario, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
@@ -27,6 +29,8 @@ try {
     $stmt->bindParam(':link_vaga', $link_vaga);
     $stmt->bindParam(':data_aplicacao', $data_aplicacao);
     $stmt->bindParam(':data_retorno', $data_retorno);
+    $stmt->bindParam(':beneficios', $beneficios);
+    $stmt->bindParam(':requisitos', $requisitos);
 
     $stmt->execute();
 
