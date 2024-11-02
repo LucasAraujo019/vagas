@@ -12,20 +12,25 @@ function formatarValorEmReais($salario) {
 function gerarBotoes($id) {
     $botaoEditar = '<form action="add_vaga.php" method="GET" style="display:inline;">
                         <input type="hidden" name="id" value="' . htmlspecialchars($id) . '">
-                        <button type="submit" class="btn btn-warning btn-custom"> <!-- Adiciona a classe personalizada -->
+                        <button type="submit" class="btn btn-warning btn-custom">
                             <i class="fas fa-edit"></i> Editar
                         </button>
                     </form>';
     
     $botaoExcluir = '<form action="delete_vaga.php" method="POST" style="display:inline;" class="delete-form" data-id="' . htmlspecialchars($id) . '">
                         <input type="hidden" name="id" value="' . htmlspecialchars($id) . '">
-                        <button type="button" class="btn btn-danger btn-custom delete-btn"> <!-- Muda o tipo para button -->
+                        <button type="button" class="btn btn-danger btn-custom delete-btn">
                             <i class="fas fa-times"></i> Excluir
                         </button>
                     </form>';
     
-    return $botaoEditar . ' ' . $botaoExcluir; // Retorna os botões concatenados
+    $botaoVisualizar = '<button type="button" class="btn btn-info btn-custom view-btn" data-id="' . htmlspecialchars($id) . '" data-toggle="modal" data-target="#viewVagaModal">
+                            <i class="fas fa-eye"></i> Visualizar
+                        </button>';
+    
+    return $botaoVisualizar . ' ' . $botaoEditar . ' ' . $botaoExcluir;
 }
+
 
 function gerarLinkVaga($url, $texto) {
     return '<a href="' . htmlspecialchars($url) . '" target="_blank">' . htmlspecialchars($texto) . '</a>';
