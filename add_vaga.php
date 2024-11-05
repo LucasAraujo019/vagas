@@ -1,14 +1,12 @@
 <?php
 require_once("templates/header.php");
 require_once("includes/functions.php");
-require_once("db.php"); // Conexão com o banco de dados
+require_once("config/db.php");
 
-// Verifica se existe um ID para a edição
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 $vaga = null;
 
 if ($id) {
-    // Consulta a vaga no banco de dados
     $stmt = $conn->prepare("SELECT * FROM vagas_cadastradas WHERE id = :id");
     $stmt->bindParam(":id", $id, PDO::PARAM_INT);
     $stmt->execute();
@@ -19,7 +17,6 @@ if ($id) {
 <div id="main-container" class="container">
     <h2><?= $id ? "Editar Vaga" : "Adicionar Nova Vaga" ?></h2>
 
-    <!-- Formulário para adicionar/editar uma vaga -->
     <form action="save_vaga.php" method="POST">
         <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
 
@@ -68,7 +65,6 @@ if ($id) {
             <textarea class="form-control" id="requisitos" name="requisitos" rows="4" required><?php echo htmlspecialchars($vaga['requisitos'] ?? ''); ?></textarea>
         </div>
 
-        <!-- Botão para salvar a vaga -->
         <button type="submit" class="btn btn-primary"><?= $id ? "Atualizar Vaga" : "Salvar Vaga" ?></button>
     </form>
 </div>

@@ -1,6 +1,6 @@
 <?php
 session_start(); // Inicia a sessão
-require_once("db.php"); // Arquivo de conexão com o banco de dados
+require_once("config/db.php"); // Arquivo de conexão com o banco de dados
 
 if (isset($_POST['id'])) {
     $id = intval($_POST['id']);

@@ -1,6 +1,6 @@
 <?php
-require_once("db.php"); 
-require_once("globals.php"); 
+require_once("config/db.php"); 
+require_once("config/globals.php"); 
 
 
 $empresa = $_POST['empresa'] ?? '';
